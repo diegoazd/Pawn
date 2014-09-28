@@ -1,4 +1,4 @@
-package com.winbits.report.db;
+package com.pawn.utils;
 
 public class SQLServerConfig implements IDBConfig{
 	// "com.microsoft.sqlserver.jdbc.SQLServerDriver"

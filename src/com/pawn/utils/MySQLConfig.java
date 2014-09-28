@@ -1,4 +1,4 @@
-package com.winbits.report.db;
+package com.pawn.utils;
 
 public class MySQLConfig implements IDBConfig{
    /* private String driver = "com.mysql.jdbc.Driver";

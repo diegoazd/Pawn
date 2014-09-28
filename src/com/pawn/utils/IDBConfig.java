@@ -1,4 +1,4 @@
-package com.winbits.report.db;
+package com.pawn.utils;
 
 public interface IDBConfig {
 	public String getDriver();
