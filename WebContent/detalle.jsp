@@ -12,7 +12,7 @@
 	<!--jquery & js-->
 	<script type="text/javascript" src="${pageContext.request.contextPath}/include/js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/include/js/jquery.mmenu.min.js"></script>
-		<title>PAW-N</title>
+	<title>PAW-N</title>
 	
 
 <script type="text/javascript">
@@ -23,8 +23,47 @@
 			  contentType: "application/json"	  
 			})
 			  .done(function( data ) {
+				  var feedDetail = "";
 				if(data.code == 200){
 					console.log(data);
+					var feed = data.single.feed;
+					var user = data.single.user;
+					
+					feedDetail = "<div class='pleaBox'>"+
+						"<div class='swiper-container'>"+
+						"<div class='swiper-wrapper'>";
+						for(var i=0;i<feed.image.length;i++){
+							feedDetail +="<div class='swiper-slide'>"+
+						    "<img alt='' src='data:image/png;base64,"+feed.image[i]+"' />"+
+							"</div>";
+						}
+ 						feedDetail+= "<img alt='' src='data:image/png;base64,"+user.avatar+"' />"+
+					    "</div>"+
+					"</div>"+					
+					"<div class='itemHeader'>"+
+					"<div class='headlineText'>"+
+					"<span class='title'>"+feed.title+"</span>"+
+					"<span class='needed'>"+feed.amountRequired+"</span>"+
+					"<span><a href=''#' class='btn btnDetalle btnFavs'><img src='/Pawn/img/secciones/favIcon.png' alt=''></a></span>"+
+					"<span><a href=''#' class='btn btnDetalle btnMail'><img src='/Pawn/img/secciones/maiIcon.png' alt=''></a></span>"+
+					"</div>"+	
+					"</div>"+
+					"<div class='offer'>"+
+					"<div class='contentOffer'>"+
+					"<img alt='' src='data:image/png;base64,"+user.avatar+"' />"+
+					"<span> Ofrezco: Curso de elaboración de cupcakes con fondant.</span>"+
+					"</div>"+
+					"<div class='offerDesc'>"+
+					"<p>"+feed.description+"</p>"+
+					"</div>"+
+					"<div class='actionButton'>"+
+					"<a href='#' class='btn btnBlack'><img src='/Pawn/img/secciones/paypalIcon.png' alt=''>  Apoyar y dejar huella.</a>"+
+					"</div>"+
+					"</div>"+
+				"</div>"+
+				"</div>";
+					$("#feed").html(feedDetail);
+
 				
 				}  
 			    
@@ -46,7 +85,7 @@
 		<!-- divs contenido -->
 		<div class="contenido" id="feed">
 
-			<div class="pleaBox">
+			<%-- <div class="pleaBox">
 
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
@@ -93,7 +132,7 @@
 				</div>
 			</div>
 
-		</div>
+		</div> --%>
 
 
 
