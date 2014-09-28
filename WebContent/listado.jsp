@@ -37,7 +37,7 @@
 						    "</div>"+
 							"<div class='headlineText'>"+
 							"<span class='title'>"+feed.title+"</span>"+
-							"<div class='leUser'>"+feed.description+"</div>"+
+							"<div class='leUser'>"+user.username+"</div>"+
 							"<div class='leDate'>"+feed.date+"</div>"+
 							"</div>"+
 							"<div class='petitionPic'>"+
@@ -46,8 +46,13 @@
 							"<small>Necesitamos:</small>"+
 							"<div class='amount'>"+feed.amountRequired+"</div>"+
 							"</div>"+
+							"<div class='doPaw'>"+
+							"<a href='/Pawn/detalle.jsp'>"+
+							"<img src='/Pawn/img/home/paw.png' alt='deja huella'> <span class='huella'>dejar huella> </span>"+
+							"</a>"+
 							"</div>"+
-						    "<img alt='' src='data:image/png;base64,"+feed.imgPrincipal+"' /></body>"+
+							"</div>"+
+						    "<img alt='' src='data:image/png;base64,"+feed.imgPrincipal+"' />"+
 							"</div>"+
 							"</div>"+
 						    "</div>";	
@@ -204,10 +209,7 @@
 
 	<script type="text/javascript" src="${pageContext.request.contextPath}/include/js/scripts.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
-			// Iniciar Swiper
-			//swipeHome('.swiper-container');
-			//Iniciar Menu
+		$(document).ready(function(){		
 			postFeed();
 			$('#menu').mmenu();
 		});	

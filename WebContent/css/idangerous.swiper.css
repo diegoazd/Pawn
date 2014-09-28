@@ -30,7 +30,7 @@ Basic Swiper Styles
 }
 .swiper-wrapper {
 	position:relative;
-	width:320px;
+	width:640px;
 	-webkit-transition-property:-webkit-transform, left, top;
 	-webkit-transition-duration:0s;
 	-webkit-transform:translate3d(0px,0,0);
@@ -87,8 +87,8 @@ sizes, pagination, etc.
 ================================================================*/
 .swiper-container {
 	/* Specify Swiper's Size: */
-	width: 320px;
-	height: 240px;
+	width: 640px;
+	height: 880px;
 }
 .swiper-slide {
 	/* Specify Slides's Size:*/
