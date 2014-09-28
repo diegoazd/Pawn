@@ -1,23 +1,14 @@
 package com.pawn.utils;
 
-import java.math.BigDecimal;
 import java.sql.CallableStatement;
-import java.sql.ParameterMetaData;
-import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-
 
 public class DBWinbits {
 	private DBConnector dbconn;
 
 	private static final String SPGetDailySalesByArea = "{call getDailySalesByArea(?) }";
-	private static final String SPGetCampaignTransactionsByDay = "{call getCampaignTransactionsByDay(?) }";
-	private static final String SPGetHistoricSalesBySku = "{call getHistoricSalesBySku(?) }";
-	private static final String SPGetSalesBySku = "{call getSalesBySku(?,?) }";
-	private static final String SPGetSkuSalesByDay = "{call getSkuSalesByDay(?,?,?) }";
 	
 	public DBWinbits() {
 	}
@@ -62,6 +53,7 @@ public class DBWinbits {
 		}
 
 	}
+<<<<<<< HEAD
 
 	public ArrayList<CampaignTransaction> getCampaignTransactionsByDay(String date) {
 		Connection conn = null;
@@ -314,5 +306,4 @@ public ArrayList<CampaignBO>  getSalesBySku(ArrayList<CampaignBO> cBO,ArrayList<
 	}	
 	return cBO;
 }*/
-
 }
