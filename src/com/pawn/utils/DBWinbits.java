@@ -1,4 +1,4 @@
-package com.winbits.report.db;
+package com.pawn.utils;
 
 import java.math.BigDecimal;
 import java.sql.CallableStatement;
@@ -9,10 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.winbits.report.bo.CampaignBO;
-import com.winbits.report.bo.CampaignTransaction;
-import com.winbits.report.bo.DetailedSaleBO;
-import com.winbits.report.bo.HistoricTransactionBO;
 
 public class DBWinbits {
 	private DBConnector dbconn;
@@ -23,8 +19,6 @@ public class DBWinbits {
 	private static final String SPGetSalesBySku = "{call getSalesBySku(?,?) }";
 	private static final String SPGetSkuSalesByDay = "{call getSkuSalesByDay(?,?,?) }";
 	
-	//call getSkuSalesByDay('2013-12-05',792,20)
-//call getSalesBySku(792,11);
 	public DBWinbits() {
 	}
 
@@ -36,7 +30,9 @@ public class DBWinbits {
 		this.dbconn = connector;
 	}
 
+	
 	// 2014-02-11
+	/*
 	public void getDailySalesByArea(String input) {
 		Connection conn = null;
 		try {
@@ -205,8 +201,6 @@ public class DBWinbits {
 						System.out.println("id : " + rs.getString("virtualCost"));
 						System.out.println("id : " + rs.getString("trackingInventory"));
 						System.out.println("id : " + rs.getString("invAvailable"));
-						//System.out.println("id : " + rs.getString("id_hdetail"));
-						//System.out.println("id : " + rs.getString("hdate_created"));
 						System.out.println("id : " + rs.getString("cost"));
 						
 						System.out.println("Humn!"+transaction.getIdCampaign()+" "+transaction.getIdOrderDetail()+" "+Integer.parseInt(rs.getString("detail_id"))
@@ -227,30 +221,9 @@ public class DBWinbits {
 							bo.addSummary(sale);
 							cBO.set(transaction.getIdReference(), bo);
 							System.out.println("THIS SHIT WORKS!");
-							//cBO.get(transaction.getIdReference()).addSummary(new DetailedSaleBO(ht.get getht.getSku()));
-							/*DetailedSaleBO sale= new DetailedSaleBO(ammount, concept, shareSale, profitMargin, shareMargin, itemsSold, id, visibility, category, subcategory, campaign, startCampaign, endCampaign)
 							
-							cBO.get(transaction.getIdReference()).addSummary(sale);
-						*/
 						
 						}
-						//jajaSystem.out.println("id : " + rs.getString("quantity_received"));
-						/*historic.add(new HistoricTransactionBO(
-								Integer.parseInt(rs.getString("id")),
-								Integer.parseInt(rs.getString("detail_id")),
-								Integer.parseInt(rs.getString("sku")),
-								Integer.parseInt(rs.getString("sku_profile_id")),
-								rs.getString("date_created"),
-								Integer.parseInt(rs.getString("quantity")),
-								new BigDecimal(rs.getString("currentSale")),
-								new BigDecimal(rs.getString("currentVirtualSale")),
-								new BigDecimal(rs.getString("virtualCost")),
-								Integer.parseInt(rs.getString("trackingInventory")),
-								Integer.parseInt(rs.getString("invAvailable")),
-								rs.getString("hdate_created"),
-								new BigDecimal(rs.getString("cost")),
-								Integer.parseInt(rs.getString("quantity_received"))
-								));*/
 					}
 					rs.close();
 				}
@@ -294,8 +267,7 @@ public ArrayList<CampaignBO>  getSalesBySku(ArrayList<CampaignBO> cBO,ArrayList<
 
 				rs = cs.getResultSet();
 				while (rs.next()) {
-					//category.add(new CategoryBO(Integer.parseInt(rs.getString("idCampaign")),Integer.parseInt(rs.getString("idCategoryWinbits")),rs.getString("categoryName")));
-				//
+					
 					System.out.println(rs.getString("id"));
 					System.out.println(rs.getString("amount"));
 					System.out.println(rs.getString("date_created"));
@@ -341,6 +313,6 @@ public ArrayList<CampaignBO>  getSalesBySku(ArrayList<CampaignBO> cBO,ArrayList<
 		e.printStackTrace();
 	}	
 	return cBO;
-}
+}*/
 
 }
