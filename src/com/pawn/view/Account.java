@@ -19,9 +19,12 @@ import com.pawn.utils.MySQLJDBC;
 
 @Path("/account")
 public class Account {
-    @Path("/testpost")
-    @POST
-    @Produces(MediaType.APPLICATION_JSON)
+
+
+
+	@Path("/test/{hi}")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
     public ComplexResponse testPost(TestBean report){
 	    ComplexResponse cr= new ComplexResponse();
