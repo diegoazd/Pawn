@@ -30,5 +30,23 @@
     <servlet-name>PawnApi</servlet-name>
     <url-pattern>/rest/*</url-pattern>
   </servlet-mapping>
+    <servlet>
+    <servlet-name>ExpressCheckout</servlet-name>
+    <servlet-class>com.paypal.ExpressCheckout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExpressCheckout</servlet-name>
+    <url-pattern>/ExpressCheckout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Return</display-name>
+    <servlet-name>Return</servlet-name>
+    <servlet-class>com.paypal.Return</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Return</servlet-name>
+    <url-pattern>/Return</url-pattern>
+  </servlet-mapping>
   
 </web-app>
