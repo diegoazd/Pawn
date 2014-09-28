@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+	<title>PAW-N</title>
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="include/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="include/css/jquery.mmenu.css">
+	<link rel="stylesheet" type="text/css" href="include/css/idangerous.swiper.css">
+	<!--jquery & js-->
+	<script type="text/javascript" src="include/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="include/js/jquery.mmenu.min.js"></script>
+	
+</head>
+<body>
+	<!-- pantalla para no mobiles -->
+	<div class="noMobile"><span class="noMobIcon icon-tool blue"></span><h1>Página ex-clu-si-va para smartphones. <br>No luce cool en desktop, ni en aiPad. :(</h1><p> Tip: Entra desde tu teléfono. ;).</p></div>
+	<!-- header y menú -->
+	<div class="header">
+		<a class="btnMenu" href="#menu">
+			<span></span>
+		</a>
+		<div class="logo"><a href="#"><img class="logoImg" src="/Pawn/img/logo.svg" alt="dream-it logo"></a></div>
+	</div>
+	<!-- Contenedor Principal -->
+	<div id="mainContainer">
+		<!-- divs contenido -->
+		<div class="contenido">
+
+			<div class="payBox">
+				
+				<div class="payContent"> 
+					<h3>Muestra el colmillo</h3>
+					<label for="name">Usuario de tu cuenta PayPal</label>
+					<input type="email" name="email" placeholder="miusuario@dominio.com" required>
+
+					<label for="name">Contraseña de tu cuenta PayPal</label>
+					<input type="password" name="passw" placeholder="1234 no es un password seguro" required>
+
+					<div class="btnPay">
+						<a href="#" class="btn btnBlue"><img src="/Pawn/img/secciones/paypalIcon.png" alt="">  Go and Pay, Pal!</a>
+					</div>
+				</div>
+
+				<div class="payConfirm">
+					<div class="thanks">
+						<img src="/Pawn/img/secciones/pawThank.png" alt="">
+						<h1 class="red">¡Guau!</h1>
+						<h2>Muchas gracias</h2>
+						
+						<a href="/Pawn/listado.jsp" class="btn btnBlack">Continuar</a>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+
+
+	<!-- fin contenedor principal -->
+	</div>
+
+	<!-- Navigation -->
+	<nav id="menu">
+		<ul>
+			<li><a href="#">Deja Huella</a></li>
+			<li class="sep"><a href="#">Crear Petición</a></li>
+			<li class="sep"><a href="#">Adopta</a></li>
+			<li class="sep"><a href="#">Crear Perfil Adopción</a></li>
+			<li class="sep"><a href="#">Mi Perfil</a></li>
+		</ul>
+	</nav>
+	<script type="text/javascript" src="include/js/idangerous.swiper-2.4.min.js"></script>
+	<script type="text/javascript" src="include/js/scripts.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// Iniciar Swiper
+			swipeHome('.swiper-container');
+			//Iniciar Menu
+			$('#menu').mmenu();
+		});	
+	</script>
+</body>
+</html>

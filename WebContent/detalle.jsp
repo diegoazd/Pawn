@@ -14,7 +14,6 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath}/include/js/jquery.mmenu.min.js"></script>
 	<title>PAW-N</title>
 	
-
 <script type="text/javascript">
 	  function postDetail() {
 		  $.ajax({
@@ -57,14 +56,12 @@
 					"<p>"+feed.description+"</p>"+
 					"</div>"+
 					"<div class='actionButton'>"+
-					"<a href='#' class='btn btnBlack'><img src='/Pawn/img/secciones/paypalIcon.png' alt=''>  Apoyar y dejar huella.</a>"+
+					"<a href='/Pawn/pay.html' class='btn btnBlack'><img src='/Pawn/img/secciones/paypalIcon.png' alt=''>  Apoyar y dejar huella.</a>"+
 					"</div>"+
 					"</div>"+
 				"</div>"+
-				"</div>";
-					$("#feed").html(feedDetail);
-
-				
+				"</div>";				
+					$("#feed").html(feedDetail);				
 				}  
 			    
 			  });	  
@@ -84,9 +81,6 @@
 	<div id="mainContainer">
 		<!-- divs contenido -->
 		<div class="contenido" id="feed">
-
-			
-
 
 	<!-- fin contenedor principal -->
 	</div>
