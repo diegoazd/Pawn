@@ -15,6 +15,10 @@
 	<title>PAW-N</title>
 	
 <script type="text/javascript">
+	  function paypal_payment(){
+		  $('#paypalPayment').submit();
+		  
+	  }	
 	  function postDetail() {
 		  $.ajax({
 			  url: "http://localhost:8080/Pawn/rest/feed/getDetail",
@@ -56,7 +60,7 @@
 					"<p>"+feed.description+"</p>"+
 					"</div>"+
 					"<div class='actionButton'>"+
-		            "<form class='form' action='ExpressCheckout' method='POST'>"+
+		            "<form class='form' id='paypalPayment' action='ExpressCheckout' method='POST'>"+
 		            "<input type='hidden' name='L_PAYMENTREQUEST_FIRSTNAME' value='Alegra'></input>"+
 		            "<input type='hidden' name='L_PAYMENTREQUEST_LASTNAME' value='Valava'></input>"+
 		            "<input type=\"hidden\" name=\"PAYMENTREQUEST_0_SHIPTOSTREET\" value=\"55 East 52nd Street\"></input>\n"+
@@ -64,17 +68,17 @@
 		            "\t\t <input type=\"hidden\" name=\"PAYMENTREQUEST_0_SHIPTOCITY\" value=\"New York\" ></input>\n"+
 		            "\t\t <input type=\"hidden\" name=\"PAYMENTREQUEST_0_SHIPTOSTATE\" value=\"NY\" ></input>\n"+
 		            "\t\t <input type=\"hidden\" name=\"PAYMENTREQUEST_0_SHIPTOZIP\" value=\"10022\" ></input>\n"+
-		            "\t\t <input type=\"hidden\" id=\"PAYMENTREQUEST_0_SHIPTOZIP\" name=\"PAYMENTREQUEST_0_SHIPTOCOUNTRY\" value=\"Mexico\"></input>\n"+
+		            "\t\t <input type=\"hidden\" id=\"PAYMENTREQUEST_0_SHIPTOZIP\" name=\"PAYMENTREQUEST_0_SHIPTOCOUNTRY\" value=\"MX\"></input>\n"+
 		            "\t\t <input type=\"hidden\" name=\"shipping_method\" id=\"shipping_method\" value=\"2.00\"></input>\n"+
-		            "<input type=\"hidden\" name='PAYMENTREQUEST_0_AMT' value='106.72'></input>"+
-		            "<input type=\"hidden\" name='PAYMENTREQUEST_0_ITEMAMT' value='106.72'></input>"+
+		            "<input type=\"hidden\" name='PAYMENTREQUEST_0_AMT' value='300.00'></input>"+
+		            "<input type=\"hidden\" name='PAYMENTREQUEST_0_ITEMAMT' value='300.00'></input>"+
 		            "<input type=\"hidden\" name='L_PAYMENTREQUEST_0_QTY0' value='1'></input>"+
-		            "<input type=\"hidden\" name='L_PAYMENTREQUEST_0_AMT0' value='106.72'></input>"+
+		            "<input type=\"hidden\" name='L_PAYMENTREQUEST_0_AMT0' value='300.00'></input>"+
 		            "<input type=\"hidden\" name='L_PAYMENTREQUEST_0_NAME0' value='FIRSTitem'></input"+
 		            "<input type=\"hidden\" name='L_PAYMENTREQUEST_0_NUMBER0' value='0'></input>"+
 		            "\t\t <input type=\"hidden\" id=\"p_method_paypal_express\" value=\"paypal_express\" name=\"payment\" title=\"PayPal Express Check out\"></input>"+
-					"<a href='#' class='btn btnBlack'><img src='/Pawn/img/secciones/paypalIcon.png' alt=''>  Apoyar y dejar huella." +
-					"<input type='submit' class='btn btn-primary btn-large' name='Confirm' value='Place Order' src='https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png' alt='Check out with PayPal'/>"+
+					"<a href='#' class='btn btnBlack' onclick='paypal_payment()'><img src='/Pawn/img/secciones/paypalIcon.png' alt=''>  Apoyar y dejar huella." +
+					//"<input type='submit' value='Apoyar y dejar huella' class='btn btnBlack' name='Confirm' src='/Pawn/img/secciones/paypalIcon.png' alt=''/>"+
 					"</a>"+
 					"</form>"+
 					"</div>"+
@@ -95,7 +99,7 @@
 		<a class="btnMenu" href="#menu">
 			<span></span>
 		</a>
-		<div class="logo"><a href="#"><img class="logoImg" src="img/logo.svg" alt="dream-it logo"></a></div>
+		<div class="logo"><a href="#"><img class="logoImg" src="/Pawn/img/logo.svg" alt="dream-it logo"></a></div>
 	</div>
 	<!-- Contenedor Principal -->
 	<div id="mainContainer">
