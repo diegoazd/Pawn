@@ -1,24 +1,13 @@
 package com.pawn.utils;
 
 public class MySQLConfig implements IDBConfig{
-   /* private String driver = "com.mysql.jdbc.Driver";
-    private String url = "jdbc:mysql://72.55.168.154/winbits_staging";
-    
-    private String username = "winbitsdev";
-    private String password = "n6qD6bLF";
-    */
+  
 	private String driver = "com.mysql.jdbc.Driver";
-    private String url = "jdbc:mysql://localhost/winbits_staging2";
+    private String url = "jdbc:mysql://localhost/pawn";
     
     private String username = "root";
     private String password = "";
-    /*
-     * 
-     * Winbits (MySQL)
-Host: 72.55.168.154
-User: winbitsdev
-Password: n6qD6bLF
-     * */
+
 	public String getDriver() {
 		return driver;
 	}
