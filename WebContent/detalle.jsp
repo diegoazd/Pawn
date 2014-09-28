@@ -33,11 +33,11 @@
 						"<div class='swiper-container'>"+
 						"<div class='swiper-wrapper'>";
 						for(var i=0;i<feed.image.length;i++){
-							feedDetail +="<div class='swiper-slide'>"+
+							feedDetail = feedDetail +"<div class='swiper-slide'>"+
 						    "<img alt='' src='data:image/png;base64,"+feed.image[i]+"' />"+
 							"</div>";
 						}
- 						feedDetail+= "<img alt='' src='data:image/png;base64,"+user.avatar+"' />"+
+ 						feedDetail= feedDetail + "<img alt='' src='data:image/png;base64,"+user.avatar+"' />"+
 					    "</div>"+
 					"</div>"+					
 					"<div class='itemHeader'>"+
@@ -51,7 +51,7 @@
 					"<div class='offer'>"+
 					"<div class='contentOffer'>"+
 					"<img alt='' src='data:image/png;base64,"+user.avatar+"' />"+
-					"<span> Ofrezco: Curso de elaboración de cupcakes con fondant.</span>"+
+					"<span> "+user.servicio+"</span>"+
 					"</div>"+
 					"<div class='offerDesc'>"+
 					"<p>"+feed.description+"</p>"+
@@ -85,55 +85,7 @@
 		<!-- divs contenido -->
 		<div class="contenido" id="feed">
 
-			<%-- <div class="pleaBox">
-
-				<div class="swiper-container">
-					<div class="swiper-wrapper">
-
-				        <!--Primer Slide-->
-						<div class="swiper-slide">
-							<img src="${pageContext.request.contextPath}/img/home/profile1-case.jpg" alt="">
-						</div>
-
-						<div class="swiper-slide"> 
-							<img src="${pageContext.request.contextPath}/img/home/profile1-case.jpg" alt="">
-						</div>
-
-						<div class="swiper-slide"> 
-							<img src="${pageContext.request.contextPath}/img/home/profile1-case.jpg" alt="">
-				    	</div>
-					</div>
-				</div>
-
-				
-				<div class="itemHeader">
-					
-					<div class="headlineText">
-						<span class="title">Cody necesita apoyo para combatir cancer de riñon.</span>
-						<span class="needed">$ 1,200.00</span>
-						<span><a href="#" class="btn btnDetalle btnFavs"><img src="${pageContext.request.contextPath}/img/secciones/favIcon.png" alt=""></a></span>
-						<span><a href="#" class="btn btnDetalle btnMail"><img src="${pageContext.request.contextPath}/img/secciones/maiIcon.png" alt=""></a></span>
-					</div>	
-
-
-				</div>
-				<div class="offer">
-					<div class="contentOffer">
-						<img src="${pageContext.request.contextPath}/img/home/profile1.png">
-						<span> Ofrezco: Curso de elaboración de cupcakes con fondant.</span>
-					</div>
-					<div class="offerDesc">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla dolor, porta id sodales et, hendrerit in nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam iaculis hendrerit ex a aliquam. Suspendisse dignissim vel enim a ultrices. Aliquam ac sem dui.</p>
-					</div>
-					<div class="actionButton">
-
-						<a href="#" class="btn btnBlack "><img src="${pageContext.request.contextPath}/img/secciones/paypalIcon.png" alt="">  Apoyar y dejar huella.</a>
-					</div>
-				</div>
-			</div>
-
-		</div> --%>
-
+			
 
 
 	<!-- fin contenedor principal -->
